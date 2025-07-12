@@ -1,1 +1,57 @@
-test
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Invio Segnalazione</title>
+  <script>
+    // Al caricamento della pagina, avvia il protocollo mailto
+    window.onload = function() {
+      window.location.href = "mailto:protocollo@comune.genova.it"
+        + "?subject=Segnalazione%20Tombino%20Via%20Marsano"
+        + "&body=Buongiorno%2C%20tombino%20OpenFiber%20in%20via%20Marsano%20"
+        + "(44.4069191%2C8.9658774)%20installato%20male%20genera%20forti%20rumori%20"
+        + "ad%20ogni%20passaggio%20auto.%20Si%20richiede%20intervento%20urgente%20"
+        + "per%20risolvere%20il%20disservizio.";
+    };
+  </script>
+  <style>
+    /* Stili di base per centrare il messaggio di ringraziamento */
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+    .message {
+      text-align: center;
+      padding: 1em 2em;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .message a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    .message a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="message">
+    <h1>Grazie per la segnalazione!</h1>
+    <p>
+      Il tuo client di posta si è aperto automaticamente.<br>
+      Se non dovesse funzionare, clicca&nbsp;
+      <a href="mailto:protocollo@comune.genova.it?subject=Segnalazione%20Tombino%20Via%20Marsano&body=Buongiorno%2C%20tombino%20OpenFiber%20in%20via%20Marsano%20(44.4069191%2C8.9658774)%20installato%20male%20genera%20forti%20rumori%20ad%20ogni%20passaggio%20auto.%20Si%20richiede%20intervento%20urgente%20per%20risolvere%20il%20disservizio.">
+      qui
+      </a>.
+    </p>
+  </div>
+</body>
+</html>
