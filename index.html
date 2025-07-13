@@ -8,49 +8,48 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Stili di base per centrare il messaggio di ringraziamento */
         body {
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh; /* Use min-height for better responsiveness */
-            font-family: 'Roboto', Arial, sans-serif; /* Use a common web font first, then fallback */
-            background-color: #eef2f6; /* Lighter, modern background */
-            color: #2c3e50; /* Darker, more readable text */
+            min-height: 100vh;
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #eef2f6;
+            color: #2c3e50;
             line-height: 1.6;
         }
         .message-container {
             text-align: center;
-            padding: 2em 3em; /* More padding for better spacing */
+            padding: 2em 3em;
             background: #ffffff;
-            border-radius: 12px; /* Slightly more rounded corners */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Softer, larger shadow */
-            max-width: 500px; /* Limit width for readability */
-            margin: 1em; /* Add some margin for smaller screens */
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 1em;
         }
         h1 {
-            color: #1a73e8; /* A shade of blue for headings */
+            color: #1a73e8;
             margin-bottom: 0.8em;
-            font-size: 2em; /* Slightly larger heading */
+            font-size: 2em;
         }
         p {
             margin-bottom: 1.5em;
         }
         .message-container a {
-            color: #1a73e8; /* Consistent link color */
+            color: #1a73e8;
             text-decoration: none;
             font-weight: bold;
-            transition: color 0.3s ease; /* Smooth transition for hover effect */
+            transition: color 0.3s ease;
         }
         .message-container a:hover,
-        .message-container a:focus { /* Add focus state for keyboard navigation */
+        .message-container a:focus {
             text-decoration: underline;
-            color: #0d47a1; /* Darker blue on hover */
+            color: #0d47a1;
         }
         .small-text {
             font-size: 0.9em;
-            color: #7f8c8d; /* Lighter grey for supplementary text */
+            color: #7f8c8d;
             margin-top: 2em;
         }
     </style>
@@ -65,7 +64,7 @@
         <p>
             Se il tuo client di posta non si è aperto o se preferisci inviare manualmente, clicca qui:
             <br>
-            <a id="emailLink" href="mailto:assistenza@openfiber.it,urp@comune.genova.it?subject=Tombino%20Danneggiato%20e%20Rumoroso%20in%20Via%20Marsano%20bassa&body=Spett.le%20Ufficio%2C%0Acon%20la%20presente%20desidero%20segnalare%20un%20tombino%2C%20di%20propriet%C3%A0%20Open%20Fiber%2C%20situato%20in%20Via%20Marsano%20bassa%2C%20poco%20prima%20della%20curva%20che%20da%20in%20via%20Donghi%20%28coordinate%20esatte%3A%2044.406922%2C%208.9658432%29.%0AL%27infrastruttura%20in%20questione%20risulta%20installata%20non%20correttamente%20o%20danneggiata%2C%20generando%20forti%20e%20ripetuti%20rumori%20al%20passaggio%20di%20ogni%20veicolo.%20Questo%20fenomeno%20costituisce%20un%20evidente%20disagio%20acustico%20per%20i%20residenti%20e%20pu%C3%B2%20configurarsi%20come%20inquinamento%20acustico.%0AConsiderata%20la%20natura%20del%20disservizio%20e%20l%27impatto%20sulla%20quiete%20pubblica%2C%20si%20richiede%20un%20intervento%20urgente%20per%20la%20verifica%2C%20la%20messa%20in%20sicurezza%20e%20la%20definitiva%20riparazione%20del%20tombino%2C%20al%20fine%20di%20ripristinare%20le%20condizioni%20di%20normale%20vivibilit%C3%A0%20e%20garantire%20il%20rispetto%20delle%20normative%20vigenti%20in%20materia%20di%20inquinamento%20acustico%20e%20manutenzione%20delle%20infrastrutture%20pubbliche.%0AFoto%20e%20video%3A%20https%3A%2F%2F1drv.ms%2Ff%2Fc%2F3ed10df975c92d17%2FElA2Cy-Grp9KnpvgyA_q5AsBlfffhTncqwoL1KUoDLu07w%3Fe%3Det0UKq%0ACordiali%20saluti.">
+            <a id="emailLink" href="#">
                 Invia la Segnalazione Ora
             </a>.
         </p>
@@ -73,15 +72,15 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const emailLink = document.getElementById('emailLink');
-            const mailtoUrl = emailLink.href; // Get the mailto URL from the link
+            const emailBody = `Spett.le Ufficio,%0A%0Acon la presente desidero segnalare un tombino%2C di propriet%C3%A0 Open Fiber%2C situato in Genova%2C Via G. B. Marsano %28altezza civ. 2 e incrocio Salita Noce%29 %E2%80%93 Coordinate esatte%3A 44.406921%2C 8.965831.%0A%0AL%27infrastruttura in questione risulta installata non correttamente o danneggiata%2C generando forti e ripetuti rumori al passaggio di ogni veicolo%2C nonch%C3%A9 un evidente disagio acustico per i residenti della zona.%0A%0AConsiderata la natura del disservizio e l%27impatto sulla quiete pubblica%2C si richiede un intervento urgente per la verifica%2C la messa in sicurezza e la definitiva riparazione del tombino%2C al fine di ripristinare le condizioni di normale vivibilit%C3%A0 e garantire il rispetto delle normative vigenti in materia di inquinamento acustico%2C manutenzione delle infrastrutture pubbliche e quiete pubblica.%0A%0ACordiali saluti.`;
 
-            // Attempt to open the mailto link after a short delay
-            // This delay helps ensure the user sees the message before redirection
-            setTimeout(function() {
-                window.location.href = mailtoUrl;
-            }, 500); // 500ms delay
+            const mailtoUrl = `mailto:assistenza@openfiber.it,urp@comune.genova.it?bcc=segnalage@gmail.com&subject=Tombino%20Danneggiato%20e%20Rumoroso%20in%20Via%20Marsano%20bassa&body=${emailBody}`;
 
+            // Set the href for the manual link
+            document.getElementById('emailLink').href = mailtoUrl;
+
+            // Attempt to open the mailto link immediately
+            window.location.href = mailtoUrl;
         });
     </script>
 </body>
