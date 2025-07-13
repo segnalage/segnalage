@@ -1,57 +1,88 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <title>Invio Segnalazione</title>
-  <script>
-    // Al caricamento della pagina, avvia il protocollo mailto
-    window.onload = function() {
-      window.location.href = "mailto:protocollo@comune.genova.it"
-        + "?subject=Segnalazione%20Tombino%20Via%20Marsano"
-        + "&body=Buongiorno%2C%20tombino%20OpenFiber%20in%20via%20Marsano%20"
-        + "(44.4069191%2C8.9658774)%20installato%20male%20genera%20forti%20rumori%20"
-        + "ad%20ogni%20passaggio%20auto.%20Si%20richiede%20intervento%20urgente%20"
-        + "per%20risolvere%20il%20disservizio.";
-    };
-  </script>
-  <style>
-    /* Stili di base per centrare il messaggio di ringraziamento */
-    body {
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      color: #333;
-    }
-    .message {
-      text-align: center;
-      padding: 1em 2em;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .message a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-    .message a:hover {
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invio Segnalazione al Comune di Genova</title>
+    <meta name="description" content="Pagina di conferma per l'invio di una segnalazione al Comune di Genova per un tombino rumoroso.">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Stili di base per centrare il messaggio di ringraziamento */
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Use min-height for better responsiveness */
+            font-family: 'Roboto', Arial, sans-serif; /* Use a common web font first, then fallback */
+            background-color: #eef2f6; /* Lighter, modern background */
+            color: #2c3e50; /* Darker, more readable text */
+            line-height: 1.6;
+        }
+        .message-container {
+            text-align: center;
+            padding: 2em 3em; /* More padding for better spacing */
+            background: #ffffff;
+            border-radius: 12px; /* Slightly more rounded corners */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Softer, larger shadow */
+            max-width: 500px; /* Limit width for readability */
+            margin: 1em; /* Add some margin for smaller screens */
+        }
+        h1 {
+            color: #1a73e8; /* A shade of blue for headings */
+            margin-bottom: 0.8em;
+            font-size: 2em; /* Slightly larger heading */
+        }
+        p {
+            margin-bottom: 1.5em;
+        }
+        .message-container a {
+            color: #1a73e8; /* Consistent link color */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease; /* Smooth transition for hover effect */
+        }
+        .message-container a:hover,
+        .message-container a:focus { /* Add focus state for keyboard navigation */
+            text-decoration: underline;
+            color: #0d47a1; /* Darker blue on hover */
+        }
+        .small-text {
+            font-size: 0.9em;
+            color: #7f8c8d; /* Lighter grey for supplementary text */
+            margin-top: 2em;
+        }
+    </style>
 </head>
 <body>
-  <div class="message">
-    <h1>Grazie per la segnalazione!</h1>
-    <p>
-      Il tuo client di posta si è aperto automaticamente.<br>
-      Se non dovesse funzionare, clicca&nbsp;
-      <a href="mailto:protocollo@comune.genova.it?subject=Segnalazione%20Tombino%20Via%20Marsano&body=Buongiorno%2C%20tombino%20OpenFiber%20in%20via%20Marsano%20(44.4069191%2C8.9658774)%20installato%20male%20genera%20forti%20rumori%20ad%20ogni%20passaggio%20auto.%20Si%20richiede%20intervento%20urgente%20per%20risolvere%20il%20disservizio.">
-      qui
-      </a>.
-    </p>
-  </div>
+    <div class="message-container" role="main">
+        <h1>Grazie per la segnalazione!</h1>
+        <p>
+            Il tuo client di posta dovrebbe aprirsi automaticamente per inviare la segnalazione al Comune di Genova e a Open Fiber.<br>
+            L'email è pre-compilata con i dettagli del problema.
+        </p>
+        <p>
+            Se il tuo client di posta non si è aperto o se preferisci inviare manualmente, clicca qui:
+            <br>
+            <a id="emailLink" href="Spett.le%20Ufficio%2C%0Acon%20la%20presente%20desidero%20segnalare%20un%20tombino%2C%20di%20propriet%C3%A0%20Open%20Fiber%2C%20situato%20in%20Via%20Marsano%20bassa%2C%20poco%20prima%20della%20curva%20che%20da%20in%20via%20Donghi%20%28coordinate%20esatte%3A%2044.406922%2C%208.9658432%29.%0AL%27infrastruttura%20in%20questione%20risulta%20installata%20non%20correttamente%20o%20danneggiata%2C%20generando%20forti%20e%20ripetuti%20rumori%20al%20passaggio%20di%20ogni%20veicolo.%20Questo%20fenomeno%20costituisce%20un%20evidente%20disagio%20acustico%20per%20i%20residenti%20e%20pu%C3%B2%20configurarsi%20come%20inquinamento%20acustico.%0AConsiderata%20la%20natura%20del%20disservizio%20e%20l%27impatto%20sulla%20quiete%20pubblica%2C%20si%20richiede%20un%20intervento%20urgente%20per%20la%20verifica%2C%20la%20messa%20in%20sicurezza%20e%20la%20definitiva%20riparazione%20del%20tombino%2C%20al%20fine%20di%20ripristinare%20le%20condizioni%20di%20normale%20vivibilit%C3%A0%20e%20garantire%20il%20rispetto%20delle%20normative%20vigenti%20in%20materia%20di%20inquinamento%20acustico%20e%20manutenzione%20delle%20infrastrutture%20pubbliche.%0AFoto%20e%20video%3A%20https%3A%2F%2F1drv.ms%2Ff%2Fc%2F3ed10df975c92d17%2FElA2Cy-Grp9KnpvgyA_q5AsBlfffhTncqwoL1KUoDLu07w%3Fe%3Det0UKq%0ACordiali%20saluti.">
+                Invia la Segnalazione Ora
+            </a>.
+        </p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const emailLink = document.getElementById('emailLink');
+            const mailtoUrl = emailLink.href; // Get the mailto URL from the link
+
+            // Attempt to open the mailto link after a short delay
+            // This delay helps ensure the user sees the message before redirection
+            setTimeout(function() {
+                window.location.href = mailtoUrl;
+            }, 500); // 500ms delay
+
+        });
+    </script>
 </body>
 </html>
